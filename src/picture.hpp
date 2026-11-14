@@ -13,7 +13,7 @@ public:
 	Picture(const Picture& other);
 	Picture(Picture&& other);
 
-	void swap(Picutre& other);
+	void swap(Picture& other);
 
 	Picture& operator=(const Picture& other);
 

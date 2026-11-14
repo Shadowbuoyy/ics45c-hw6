@@ -4,6 +4,8 @@
 
 Picture::Picture() : head{nullptr}, tail{nullptr} {}
 
+Picture::~Picture() {}
+
 void Picture::add(const Shape& shape) {
 	ListNode* new_node = new ListNode{shape.clone(), nullptr};
 
@@ -23,5 +25,24 @@ void Picture::print_all(std::ostream& out) const {
 		temp->shape->print(out);
 		temp = temp->next;
 	}
+}
+
+void Picture::draw_all(std::ostream& out) const {
+	ListNode* temp = head;
+	while(temp != nullptr) {
+		temp->shape->draw(out);
+		temp = temp->next;
+	}
+}
+
+double Picture::total_area() const {
+	double total = 0.0;
+	ListNode* temp = head;
+	while(temp != nullptr) {
+		total += temp->shape->area();
+		temp = temp->next;
+	}
+
+	return total;
 }
 

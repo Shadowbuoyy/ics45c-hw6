@@ -16,6 +16,8 @@ int main(int argc, char * argv[])
 	Circle circle_1(Point{1, 1}, "circle_1", 2); 
 	collage.add(circle_1);
 	collage.print_all(cout);
+	collage.draw_all(cout);
+	collage.total_area();
 }
 
 

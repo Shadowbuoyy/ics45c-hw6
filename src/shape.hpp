@@ -9,7 +9,7 @@
 struct Point {
 	int x;
 	int y;
-}
+};
 
 class Shape {
 public:
@@ -28,7 +28,7 @@ public:
 	virtual ~Shape() = default;
 
 protected:
-	Shape(const Shape& other) = default
+	Shape(const Shape& other) = default;
 
 private:
 	Point center;
