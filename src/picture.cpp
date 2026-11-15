@@ -6,6 +6,23 @@ Picture::Picture() : head{nullptr}, tail{nullptr} {}
 
 Picture::~Picture() {}
 
+// Stub for copy constructor
+Picture::Picture(const Picture& other) : head{nullptr}, tail{nullptr} {
+}
+
+// Stub for move constructor
+Picture::Picture(Picture&& other) : head{nullptr}, tail{nullptr} {
+}
+
+// Stub for swap
+void Picture::swap(Picture& other) {
+}
+
+// Stub for copy assignment
+Picture& Picture::operator=(const Picture& other) {
+    return *this;
+}
+
 void Picture::add(const Shape& shape) {
 	ListNode* new_node = new ListNode{shape.clone(), nullptr};
 
